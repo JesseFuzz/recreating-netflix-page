@@ -1,24 +1,26 @@
+/*  declarei variáveis   */
 :root{
     --vermelho:#E50914;
     --preto:#141414; 
 }
-
+/*  zerei algumas configs   */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*  elementos da base   */
 body{
     background-color: var(--preto);
     font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
 }
 
 header .container{
     display: flex;
-    flex-direction: row;
+    flex-direction: row;   /*um ao lado do outro padrão do display flex*/
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 header .logo{
@@ -26,14 +28,84 @@ header .logo{
     font-family: "Arial Black";
     font-size: 40px;
 }
-
+/*  utilizei pra acessar sem criar classe   */
 header nav a{
     text-decoration: none;
     color: #aaa;
     background-color: none;
     margin-right: 10px;
 }
-
+/*  caso o mouse passe por cimm ele muda de cor   */
 header nav a:hover{
     color: #fff;
+}
+
+/*  filme principal   */
+
+.principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%), url("https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lW7MvZ4m49IUj2UrUu4z0xVVl81.jpg");
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column; /*  um embaixo do outro   */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    
+}
+
+.titulo{
+    font-size: 45px;
+    margin-top: 15%;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none; 
+    padding: 15px 50px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .15s ease all;
+    
+
+    /*  efeito de vidro "glassmorphism   */
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /*  efeito de sombra embaixo   */
+    box-shadow: 0px 10px 10px 8px rgba(0,0,0,0.1);
+
+    /*  efeito de movimentação pra cima e baixo   */
+    animation: float 3s ease-in-out infinite; 
+}
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0);
+    
+    }
+
+}
+
+/*  efeito quando passar o mouse, ainda com vidro só que mais escuro   */
+.botao:hover{
+   background: rgba(255, 255, 255, 0.385);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);       
+}
+
+.botao i{
+    margin-right: 5px;
 }
