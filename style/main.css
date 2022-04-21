@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*  importei a fonte da netflix   */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&display=swap');
+
+
+
 /*  declarei variáveis   */
 :root{
     --vermelho:#E50914;
@@ -21,12 +27,15 @@ header .container{
     flex-direction: row;   /*um ao lado do outro padrão do display flex*/
     align-items: center;
     justify-content: space-around;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 header .logo{
     color: var(--vermelho);
-    font-family: "Arial Black";
-    font-size: 40px;
+    font-size: 90px;
+    /*  FONTE DA NETFLIX   */
+    font-family: 'Bebas Neue', cursive;
+    
 }
 /*  utilizei pra acessar sem criar classe   */
 header nav a{
@@ -34,6 +43,8 @@ header nav a{
     color: #aaa;
     background-color: none;
     margin-right: 10px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
 }
 /*  caso o mouse passe por cimm ele muda de cor   */
 header nav a:hover{
@@ -44,8 +55,8 @@ header nav a:hover{
 
 .principal{
     font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%), url("https://www.themoviedb.org/t/p/w533_and_h300_bestv2/hiK4qc0tZijQ9KNUnBIS1k4tdMJ.jpg");
-    background-size: cover;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%), url("https://www.scdn.co/i/_global/open-graph-default.png");
+    background-size: auto, 50%;
     height: 400px;
     display: flex;
     flex-direction: column; /*  um embaixo do outro   */
@@ -65,7 +76,8 @@ header nav a:hover{
 }
 
 .botao{
-    background-color: rgba(0,0,0,.50);
+    background-color: rgb(255, 255, 255);
+    color: #fff;
     border: none; 
     padding: 15px 50px;
     margin-right: 15px;
@@ -118,6 +130,7 @@ header nav a:hover{
 /*  pra se adaptar quando a tela tiver menor   */
 .principal .container{
     width: 70%;
+    margin-bottom: 50px;
 }
 
 .box-filme{
@@ -127,5 +140,6 @@ header nav a:hover{
 }
 
 .carrosel-filmes{
-    margin-top: 5px;
+    margin-top: 15px;
 }
+
